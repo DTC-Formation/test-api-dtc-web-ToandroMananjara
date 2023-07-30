@@ -79,9 +79,26 @@ li{
     padding: 0;
     list-style: none;
 }
+.name .ok{
+    margin-right: 45px;
+}
+.email .ok{
+    margin-right: 50px;
+}
+.address .ok{
+    margin-right: 27px;
+}
+.phone .ok{
+    margin-right: 41px;
+}
+.Website .ok{
+    margin-right: 27px;
+}
+.Company .ok{
+    margin-right:10px;
+}
 span{
     color:#FFD400;
-    width:20px;
 }
 @media only screen and (max-width:600px){
     .container-item{

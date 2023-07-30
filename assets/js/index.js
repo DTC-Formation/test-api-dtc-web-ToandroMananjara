@@ -45,7 +45,7 @@ function create(){
     liCompany.classList.add('Company')
     ul.append(liName,liUserName,liEmail,liAdress,liPhone,liWebsite,liCompany)
 
-     btn = document.createElement("button")
+    btn = document.createElement("button")
     btn.innerHTML = '<i class="fa-regular fa-eye"></i>'
     containerItem.appendChild(btn)
     
@@ -77,17 +77,20 @@ fetch("./assets/user.json")
             document.querySelectorAll('.Website').forEach(element2=>{
                 element2.classList.toggle('toggle')
             })
+            document.querySelectorAll('.phone').forEach(element2=>{
+                element2.classList.toggle('toggle')
+            })
             document.querySelectorAll('.Company').forEach(element3=>{
                 element3.classList.toggle('toggle')
             })
         })           
         img.src = "./assets/img/user-avatar.png"
-        liName.innerHTML =    "<span>Name :</span> " + obj.name
-        liUserName.innerHTML ="<span>UserName :</span> "+ obj.username
-        liEmail.innerHTML =   "<span>Email    : </span>" +  obj.email
-        liAdress.innerHTML =  "<span>Address  : </span>" + obj.address
-        liPhone.innerHTML =   "<span>Phone    : </span>" +obj.phone
-        liWebsite.innerHTML = "<span>Website  : </span>" + obj.website
-        liCompany.innerHTML = "<span>Company  : </span>" + obj.company
+        liName.innerHTML =    '<span class="ok">Name</span>'+'<span>: </span>'+ obj.name
+        liUserName.innerHTML ='<span class="ok">UserName</span> '+'<span>: </span>' +obj.username
+        liEmail.innerHTML =   '<span class="ok">Email</span>'+'<span>: </span>' +  obj.email
+        liAdress.innerHTML =  '<span class="ok">Address</span>'+'<span>: </span>' + obj.address
+        liPhone.innerHTML =   '<span class="ok">Phone</span>'+'<span>: </span>' + obj.phone
+        liWebsite.innerHTML = '<span class="ok">Website</span>'+'<span>: </span>' + obj.website
+        liCompany.innerHTML = '<span class="ok">Company</span>'+'<span>: </span>' + obj.company
     }
 });
