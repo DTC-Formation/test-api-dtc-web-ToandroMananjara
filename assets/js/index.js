@@ -51,8 +51,6 @@ function create(){
     
 }
 
-let clas  = "fa-regular fa-eye-slash"
-
 fetch("./assets/user.json")
 .then(res => res.json())
 .then(user => {
@@ -61,8 +59,8 @@ fetch("./assets/user.json")
         
         create()
         btn.addEventListener('click',function(){
-            console.log('ok');
             document.querySelectorAll('button').forEach(element4=>{
+                element4.title="afficher plus de resultat"
                 if(element4.innerHTML=='<i class="fa-regular fa-eye"></i>' ){
                     element4.innerHTML='<i class="fa-regular fa-eye-slash"></i>'
                 }
