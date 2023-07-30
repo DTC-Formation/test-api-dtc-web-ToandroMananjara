@@ -6,12 +6,7 @@
     font-family: apol;
 }
 body{
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap ;
-    justify-content: center;
-    align-items: center;
+    
     background: #59656F;
     margin: 0;
 }
@@ -26,11 +21,12 @@ body{
     margin: 0;
 }
 h1{
+    text-align: center;
     color: #FFD400;
     font-size: 40px;
     /* margin: 0; */
 }
-.container{
+.container-item{
     width: 40%;
     border: none;
     font-size: 20px ;
@@ -38,7 +34,7 @@ h1{
     flex-direction: column;
     align-items: center;
     background: #1D1E2C;
-    color: #FFD400;
+    color: #FFFFFF;
     box-shadow: #2e2f3f 8px 8px 8px;
     border-radius: 15px;
     margin: 15px;
@@ -60,9 +56,10 @@ img{
 .about{
     width: 80%;
     height:50%;
-    text-align: left;
+    /* text-align: left; */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     /* border: 1px solid black; */
     margin: 10px;
 }
@@ -76,7 +73,9 @@ li{
     padding: 0;
     list-style: none;
 }
-
+span{
+    color:#FFD400;
+}
 @media only screen and (max-width:600px){
     .container{
         width: 90%;

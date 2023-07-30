@@ -6,14 +6,12 @@ let liPhone
 let liWebsite
 let liCompany
 let img
-let span
-let nom = "Name: "
 
 
 function create(){
-    let container=document.createElement('div')
-    container.classList.add('container')
-    document.getElementById('container').appendChild(container)
+    let containerItem=document.createElement('div')
+    containerItem.classList.add('container-item')
+    document.getElementById('container').appendChild(containerItem)
     img=document.createElement('img')
     
     let imgContainer=document.createElement('div')
@@ -25,7 +23,7 @@ function create(){
     
     
     
-    container.append(imgContainer,about)
+    containerItem.append(imgContainer,about)
     
     let ul=document.createElement('ul')
     about.appendChild(ul)
@@ -40,27 +38,21 @@ function create(){
     ul.append(liName,liUserName,liEmail,liAdress,liPhone,liWebsite,liCompany)
 }
 
-// // span=document.createElement('span')       
-// // span.innerHTML ="nom"
-// liName.appendChild(span)
-
-
 fetch("./assets/user.json")
 .then(res => res.json())
 .then(user => {
-    // obj = user [j
     for (let k = 0 ; k<user.length;k++){
         let obj = user [k] 
         
         create()
-        
-        img.src = "./assets/img/ZO.jpg"
-        liName.innerHTML = "Name : "+ obj.name
-        liUserName.innerHTML = "UserName : "+ obj.username
-        liEmail.innerHTML = "Email : " +  obj.email
-        liAdress.innerHTML = "Address : " + obj.address
-        liPhone.innerHTML = "Phone : " +obj.phone
-        liWebsite.innerHTML = "Website : " + obj.website
-        liCompany.innerHTML = "Company : " + obj.company
+
+        img.src = "./assets/img/user-avatar.png"
+        liName.innerHTML = "<span>Name : </span> " + obj.name
+        liUserName.innerHTML = "<span>UserName :</span> "+ obj.username
+        liEmail.innerHTML = "<span>Email : </span>" +  obj.email
+        liAdress.innerHTML = "<span>Address : </span>" + obj.address
+        liPhone.innerHTML = "<span>Phone : </span>" +obj.phone
+        liWebsite.innerHTML = "<span>Website : </span>" + obj.website
+        liCompany.innerHTML = "<span>Company : </span>" + obj.company
     }
 });
