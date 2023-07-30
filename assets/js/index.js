@@ -51,7 +51,9 @@ function create(){
     
 }
 
-fetch("./assets/user.json")
+setTimeout(() => {
+    let loader = document.querySelector('.loader').remove()
+    fetch("./assets/user.json")
 .then(res => res.json())
 .then(user => {
     for (let k = 0 ; k<user.length;k++){
@@ -92,3 +94,5 @@ fetch("./assets/user.json")
         liCompany.innerHTML = '<span class="ok">Company</span>'+'<span>: </span>' + obj.company
     }
 });
+    
+}, 5000);
