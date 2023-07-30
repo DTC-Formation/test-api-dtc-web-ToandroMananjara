@@ -55,10 +55,6 @@ img{
     height: 100%;
     border-radius: 50%;
 }
-#container{
-
-}
-
 .about{
     width: 80%;
     height:50%;
@@ -97,6 +93,10 @@ li{
 .Company .ok{
     margin-right:10px;
 }
+
+
+
+
 span{
     color:#FFD400;
 }
@@ -104,6 +104,30 @@ span{
     .container-item{
         width: 90%;
         font-size: 15px;
+    }
+    .about{
+        margin: 0;
+    }
+    .name .ok{
+        margin-right: 45px;
+    }
+    .user-name .ok{
+        margin-right: 11px;
+    }
+    .email .ok{
+        margin-right: 48.5px;
+    }
+    .address .ok{
+        margin-right: 31px;
+    }
+    .phone .ok{
+        margin-right: 41.5px;
+    }
+    .Website .ok{
+        margin-right: 31px;
+    }
+    .Company .ok{
+        margin-right:18px;
     }
 }
 
