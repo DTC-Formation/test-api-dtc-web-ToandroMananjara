@@ -46,11 +46,12 @@ function create(){
     ul.append(liName,liUserName,liEmail,liAdress,liPhone,liWebsite,liCompany)
 
      btn = document.createElement("button")
-    btn.innerHTML = '<i class="fa-solid fa-caret-down"></i>'
+    btn.innerHTML = '<i class="fa-regular fa-eye"></i>'
     containerItem.appendChild(btn)
     
 }
 
+let clas  = "fa-regular fa-eye-slash"
 
 fetch("./assets/user.json")
 .then(res => res.json())
@@ -61,8 +62,14 @@ fetch("./assets/user.json")
         create()
         btn.addEventListener('click',function(){
             console.log('ok');
-            document.querySelectorAll('i').forEach(element4=>{
-                element4.classList.toggle('fa-rotate-180')
+            document.querySelectorAll('button').forEach(element4=>{
+                if(element4.innerHTML=='<i class="fa-regular fa-eye"></i>' ){
+                    element4.innerHTML='<i class="fa-regular fa-eye-slash"></i>'
+                }
+                else if(element4.innerHTML=='<i class="fa-regular fa-eye-slash"></i>' ){
+                    element4.innerHTML='<i class="fa-regular fa-eye"></i>'
+                }
+                  
             })          
             document.querySelectorAll('.address').forEach(element=>{
                 element.classList.toggle('toggle')
@@ -75,12 +82,12 @@ fetch("./assets/user.json")
             })
         })           
         img.src = "./assets/img/user-avatar.png"
-        liName.innerHTML = "<span>Name : </span> " + obj.name
-        liUserName.innerHTML = "<span>UserName :</span> "+ obj.username
-        liEmail.innerHTML = "<span>Email : </span>" +  obj.email
-        liAdress.innerHTML = "<span>Address : </span>" + obj.address
-        liPhone.innerHTML = "<span>Phone : </span>" +obj.phone
-        liWebsite.innerHTML = "<span>Website : </span>" + obj.website
-        liCompany.innerHTML = "<span>Company : </span>" + obj.company
+        liName.innerHTML =    "<span>Name :</span> " + obj.name
+        liUserName.innerHTML ="<span>UserName :</span> "+ obj.username
+        liEmail.innerHTML =   "<span>Email    : </span>" +  obj.email
+        liAdress.innerHTML =  "<span>Address  : </span>" + obj.address
+        liPhone.innerHTML =   "<span>Phone    : </span>" +obj.phone
+        liWebsite.innerHTML = "<span>Website  : </span>" + obj.website
+        liCompany.innerHTML = "<span>Company  : </span>" + obj.company
     }
 });
