@@ -129,6 +129,9 @@ span{
     .Company .ok{
         margin-right:18px;
     }
+    button{
+        font-size: 15;
+    }
 }
 
 .address,.phone,.Website,.Company{
@@ -141,6 +144,10 @@ span{
 button{
     cursor: pointer;
     width: 50px;
+    border: none;
+    border-radius: 5px;
     font-size: 20px;
+    margin-top: 5px;
     padding: 0;
+    padding-top: 2px;
 }
