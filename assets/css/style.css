@@ -26,7 +26,7 @@ body{
     border: solid 5px transparent;
     border-top:solid 5px #1D1E2C;
     border-bottom:solid 5px #1D1E2C;
-    animation: loader 1s infinite;
+    animation: loader 1s infinite ;
 }
 @keyframes loader {
     from{
@@ -129,6 +129,10 @@ span{
     }
     .about{
         margin: 0;
+    }
+    .loader{
+        width: 50px;
+        height: 50px;
     }
     .name .ok{
         margin-right: 45px;
