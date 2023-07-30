@@ -1,21 +1,53 @@
+@font-face {
+    font-family: apol;
+    src: url(../fonts/Astonpoliz/Astonpoliz.otf),url(../fonts/Astonpoliz/Astonpoliz.ttf);
+}
+*{
+    font-family: apol;
+}
 body{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
     justify-content: center;
     align-items: center;
+    background: #59656F;
     margin: 0;
 }
+#container{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    justify-content: center;
+    align-items: center;
+    background: #59656F;
+    margin: 0;
+}
+h1{
+    color: #FFD400;
+    font-size: 40px;
+    /* margin: 0; */
+}
 .container{
-    width: 50%;
-    border: 1px solid black;
+    width: 40%;
+    border: none;
+    font-size: 20px ;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #1D1E2C;
+    color: #FFD400;
+    box-shadow: #2e2f3f 8px 8px 8px;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px 0;   
 }
-.img{
+.img-container{
     width: 150px;
     height: 150px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 50%;
     margin: 10px;
 }
@@ -28,8 +60,10 @@ img{
 .about{
     width: 80%;
     height:50%;
-    text-align: center;
-    border: 1px solid black;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
     margin: 10px;
 }
 ul{
@@ -37,8 +71,15 @@ ul{
     padding: 0;
 }
 li{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+@media only screen and (max-width:600px){
+    .container{
+        width: 90%;
+        font-size: 15px;
+    }
 }
