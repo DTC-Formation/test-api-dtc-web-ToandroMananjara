@@ -112,6 +112,30 @@ setTimeout(() => {
                     displayNone(website[k])
                     displayNone(company[k])
                 }
+                window.addEventListener('resize',function(){
+                    if (window.innerWidth <=600){
+                        address.forEach(add => {
+                            enfant =add.querySelector('.ok')
+                            enfant.style.marginRight="31px"
+                            
+                        });
+                        phone.forEach(add => {
+                            enfant =add.querySelector('.ok')
+                            enfant.style.marginRight="41.5px"
+                            
+                        });
+                        website.forEach(add => {
+                            enfant =add.querySelector('.ok')
+                            enfant.style.marginRight="30.5px"
+                            
+                        });
+                        company.forEach(add => {
+                            enfant =add.querySelector('.ok')
+                            enfant.style.marginRight="18px"
+                            
+                        });   
+                    }
+                   })
                 
             
                 
@@ -128,30 +152,7 @@ setTimeout(() => {
 
             
         // Alignement de tous les deux points
-           window.addEventListener('resize',function(){
-            if (window.innerWidth <=600){
-                address.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="31px"
-                    
-                });
-                phone.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="41.5px"
-                    
-                });
-                website.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="30.5px"
-                    
-                });
-                company.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="18px"
-                    
-                });   
-            }
-           })
+  
             
                 address.forEach(add => {
                     enfant =add.querySelector('.ok')
