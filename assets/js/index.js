@@ -127,26 +127,56 @@ setTimeout(() => {
             liCompany.innerHTML = '<span class="ok">Company</span>'+'<span>: </span>' + obj.company
 
             
-            address.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="27px"
-                
-            });
-            phone.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="41px"
-                
-            });
-            website.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="27px"
-                
-            });
-            company.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="10px"
-                
-            });
+        // Alignement de tous les deux points
+           window.addEventListener('resize',function(){
+            if (window.innerWidth <=600){
+                address.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="31px"
+                    
+                });
+                phone.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="41.5px"
+                    
+                });
+                website.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="31px"
+                    
+                });
+                company.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="18px"
+                    
+                });   
+            }
+            else{
+                address.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="27px"
+                    
+                });
+                phone.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="41px"
+                    
+                });
+                website.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="27px"
+                    
+                });
+                company.forEach(add => {
+                    enfant =add.querySelector('.ok')
+                    enfant.style.marginRight="10px"
+                    
+                });
+            }
+           })
+
+            
+
         }
     });
     
