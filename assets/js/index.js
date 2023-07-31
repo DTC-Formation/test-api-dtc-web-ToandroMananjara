@@ -55,7 +55,7 @@ function displayNone(display){
 }
 
 function displayBlock(display){
-    display.style.display="block"
+    display.style.display="flex"
 }
 
 let bt = []         // on va recuperer tous les boutons dans le tableau bt 
@@ -120,67 +120,17 @@ setTimeout(() => {
         })
         
             img.src = "./assets/img/user-avatar.png"
-            liName.innerHTML =    '<span class="ok">Name</span>'+'<span>: </span>'+ obj.name
-            liUserName.innerHTML ='<span class="ok">UserName</span> '+'<span>: </span>' +obj.username
-            liEmail.innerHTML =   '<span class="ok">Email</span>'+'<span>: </span>' +  obj.email
-            liAdress.innerHTML =  '<span class="ok">Address</span>'+'<span>: </span>' + obj.address
-            liPhone.innerHTML =   '<span class="ok">Phone</span>'+'<span>: </span>' + obj.phone
-            liWebsite.innerHTML = '<span class="ok">Website</span>'+'<span>: </span>' + obj.website
-            liCompany.innerHTML = '<span class="ok">Company</span>'+'<span>: </span>' + obj.company
+            liName.innerHTML =    '<h6 class="ok">Name</h6>'+'<span>: </span>'+ obj.name
+            liUserName.innerHTML ='<h6 class="ok">UserName</h6> '+'<span>: </span>' +obj.username
+            liEmail.innerHTML =   '<h6 class="ok">Email</h6>'+'<span>: </span>' +  obj.email
+            liAdress.innerHTML =  '<h6 class="ok">Address</h6>'+'<span>: </span>' + obj.address
+            liPhone.innerHTML =   '<h6 class="ok">Phone</h6>'+'<span>: </span>' + obj.phone
+            liWebsite.innerHTML = '<h6 class="ok">Website</h6>'+'<span>: </span>' + obj.website
+            liCompany.innerHTML = '<h6 class="ok">Company</h6>'+'<span>: </span>' + obj.company
 
             
-        // Alignement de tous les deux points
-  
-            
-                address.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="27px"
-                    
-                });
-                phone.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="41px"
-                    
-                });
-                website.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="27px"
-                    
-                });
-                company.forEach(add => {
-                    enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="10px"
-                    
-                });
-            }
-           
-            
-
-    });
-    window.addEventListener('resize',function(){
-        if (window.innerWidth <=600){
-            address.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="31px"
-                
-            });
-            phone.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="41.5px"
-                
-            });
-            website.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="30.5px"
-                
-            });
-            company.forEach(add => {
-                enfant =add.querySelector('.ok')
-                enfant.style.marginRight="18px"
-                
-            });   
-        }
-       })    
-    let loader = document.querySelector('.loader').remove()
+        }   
+    })
+    document.querySelector('.loader').remove()
 }, 2000);
 
