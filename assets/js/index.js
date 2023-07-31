@@ -151,7 +151,8 @@ setTimeout(() => {
                     
                 });   
             }
-            else{
+           })
+            
                 address.forEach(add => {
                     enfant =add.querySelector('.ok')
                     enfant.style.marginRight="27px"
@@ -173,11 +174,9 @@ setTimeout(() => {
                     
                 });
             }
-           })
-
+           
             
 
-        }
     });
     
     let loader = document.querySelector('.loader').remove()
