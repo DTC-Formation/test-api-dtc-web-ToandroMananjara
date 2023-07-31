@@ -142,7 +142,7 @@ setTimeout(() => {
                 });
                 website.forEach(add => {
                     enfant =add.querySelector('.ok')
-                    enfant.style.marginRight="31px"
+                    enfant.style.marginRight="30.5px"
                     
                 });
                 company.forEach(add => {
