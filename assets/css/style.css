@@ -8,8 +8,7 @@
 body{
     
     display: flex;
-    flex-direction: row;
-    flex-wrap:wrap ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #59656F;
@@ -37,22 +36,19 @@ body{
     }
 }
 
-.toggle{
-    display: block;
-}
+
 
 h1{
     text-align: center;
     color: #FFD400;
     font-size: 40px;
-    /* margin: 0; */
     position: absolute  ;
     top: 0;   
 }
 .container-item{
     position: relative;
     top: 80px;
-    width: 40%;
+    width: 60%;
     border: none;
     font-size: 20px ;
     display: flex;
@@ -103,21 +99,6 @@ li{
 .email .ok{
     margin-right: 50px;
 }
-.address .ok{
-    margin-right: 27px;
-}
-.phone .ok{
-    margin-right: 41px;
-}
-.Website .ok{
-    margin-right: 27px;
-}
-.Company .ok{
-    margin-right:10px;
-}
-
-
-
 
 span{
     color:#FFD400;
@@ -160,13 +141,7 @@ span{
     }
 }
 
-.address,.phone,.Website,.Company{
-    display: none;
-}
 
-.toggle{
-    display: block;
-}
 button{
     cursor: pointer;
     width: 50px;
