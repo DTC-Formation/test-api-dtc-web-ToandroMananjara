@@ -63,6 +63,7 @@ let address = []    // on va recuperer tous les li address dans le tableau bt
 let phone = []      // on va recuperer tous les li phone dans le tableau bt
 let website = []    // on va recuperer tous les li website dans le tableau bt
 let company = []    // on va recuperer tous les li company dans le tableau bt
+
 setTimeout(() => {
     
     fetch("./assets/user.json")
@@ -112,30 +113,7 @@ setTimeout(() => {
                     displayNone(website[k])
                     displayNone(company[k])
                 }
-                window.addEventListener('resize',function(){
-                    if (window.innerWidth <=600){
-                        address.forEach(add => {
-                            enfant =add.querySelector('.ok')
-                            enfant.style.marginRight="31px"
-                            
-                        });
-                        phone.forEach(add => {
-                            enfant =add.querySelector('.ok')
-                            enfant.style.marginRight="41.5px"
-                            
-                        });
-                        website.forEach(add => {
-                            enfant =add.querySelector('.ok')
-                            enfant.style.marginRight="30.5px"
-                            
-                        });
-                        company.forEach(add => {
-                            enfant =add.querySelector('.ok')
-                            enfant.style.marginRight="18px"
-                            
-                        });   
-                    }
-                   })
+               
                 
             
                 
@@ -179,7 +157,30 @@ setTimeout(() => {
             
 
     });
-    
+    window.addEventListener('resize',function(){
+        if (window.innerWidth <=600){
+            address.forEach(add => {
+                enfant =add.querySelector('.ok')
+                enfant.style.marginRight="31px"
+                
+            });
+            phone.forEach(add => {
+                enfant =add.querySelector('.ok')
+                enfant.style.marginRight="41.5px"
+                
+            });
+            website.forEach(add => {
+                enfant =add.querySelector('.ok')
+                enfant.style.marginRight="30.5px"
+                
+            });
+            company.forEach(add => {
+                enfant =add.querySelector('.ok')
+                enfant.style.marginRight="18px"
+                
+            });   
+        }
+       })    
     let loader = document.querySelector('.loader').remove()
 }, 2000);
 
